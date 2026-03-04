@@ -20,8 +20,8 @@ export function Navbar() {
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-white">
-            <span className="text-sm font-bold text-black">N</span>
+          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#6A0DAD]">
+            <span className="text-sm font-bold text-white">N</span>
           </div>
           <span className="text-lg font-semibold tracking-tight text-white">
             NexGen
@@ -34,7 +34,7 @@ export function Navbar() {
             <Link
               key={link.label}
               href={link.href}
-              className="text-sm text-gray-400 transition-colors hover:text-white"
+              className="text-sm text-[#a0a0a0] transition-colors hover:text-white"
             >
               {link.label}
             </Link>
@@ -45,13 +45,13 @@ export function Navbar() {
         <div className="hidden items-center gap-4 lg:flex">
           <Link
             href="#"
-            className="text-sm text-gray-400 transition-colors hover:text-white"
+            className="text-sm text-[#a0a0a0] transition-colors hover:text-white"
           >
             Sign in
           </Link>
           <Link
             href="#"
-            className="rounded-full bg-white px-4 py-2 text-sm font-medium text-black transition-opacity hover:opacity-90"
+            className="rounded-full bg-[#6A0DAD] px-4 py-2 text-sm font-medium text-white transition-opacity hover:opacity-90"
           >
             Get Started
           </Link>
@@ -69,25 +69,25 @@ export function Navbar() {
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="lg:hidden border-t border-white/10 bg-black/95 backdrop-blur-xl">
+        <div className="lg:hidden border-t border-[#6A0DAD]/20 bg-[#1C1C1C]/95 backdrop-blur-xl">
           <div className="flex flex-col gap-4 px-6 py-6">
             {navLinks.map((link) => (
               <Link
                 key={link.label}
                 href={link.href}
-                className="text-base text-gray-400 transition-colors hover:text-white"
+                className="text-base text-[#a0a0a0] transition-colors hover:text-white"
                 onClick={() => setMobileOpen(false)}
               >
                 {link.label}
               </Link>
             ))}
-            <div className="mt-4 flex flex-col gap-3 border-t border-white/10 pt-4">
-              <Link href="#" className="text-base text-gray-400 hover:text-white">
+            <div className="mt-4 flex flex-col gap-3 border-t border-[#6A0DAD]/20 pt-4">
+              <Link href="#" className="text-base text-[#a0a0a0] hover:text-white">
                 Sign in
               </Link>
               <Link
                 href="#"
-                className="rounded-full bg-white px-4 py-2.5 text-center text-sm font-medium text-black"
+                className="rounded-full bg-[#6A0DAD] px-4 py-2.5 text-center text-sm font-medium text-white"
               >
                 Get Started
               </Link>

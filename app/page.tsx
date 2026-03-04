@@ -3,7 +3,7 @@ import { Hero } from "@/components/hero"
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black">
+    <main className="min-h-screen bg-[#1C1C1C]">
       <Navbar />
       <Hero
         title="Build smarter tools for modern teams"
