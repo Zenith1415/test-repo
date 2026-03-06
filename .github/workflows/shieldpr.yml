@@ -14,13 +14,14 @@ jobs:
       - name: 📥 Checkout Pull Request Code
         uses: actions/checkout@v4
 
-      - name: 🚀 Boot CI/CD Staging Server
+     - name: 🚀 Boot CI/CD Staging Server (Node.js)
         run: |
-          echo "Booting the PR code into a staging environment..."
-          python3 -m pip install flask --break-system-packages
-          python3 app.py &
-          sleep 3
-
+          echo "Booting the PR code into an ephemeral staging environment..."
+          npm install
+          # Start the dev server in the background
+          npm run dev &
+          # Give the JS bundler a few seconds to compile and start
+          sleep 5
       - name: 🧠 Fetch & Run ShieldCI Agent
         run: |
           # 1. Download your DevSecOps Engine from your main repo
