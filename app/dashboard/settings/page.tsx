@@ -91,12 +91,6 @@ export default function SettingsPage() {
         <SettingRow label="Notify after every scan" description="Receive a summary after each completed scan"><Toggle value={notifScan} onChange={() => setNotifScan(!notifScan)} /></SettingRow>
       </Section>
 
-      <div style={{ display: "flex", justifyContent: "flex-end" }}>
-        <button onClick={handleSave} style={{ padding: "12px 28px", borderRadius: "12px", background: saved ? "linear-gradient(135deg, #16a34a, #22c55e)" : "linear-gradient(135deg, #6A0DAD, #9b30f0)", border: saved ? "1px solid rgba(34,197,94,0.4)" : "1px solid rgba(160,80,255,0.4)", color: "white", fontSize: "14px", fontWeight: 600, fontFamily: "'Trebuchet MS', sans-serif", cursor: "pointer", display: "flex", alignItems: "center", gap: "8px", boxShadow: saved ? "0 0 20px rgba(34,197,94,0.3)" : "0 0 20px rgba(106,13,173,0.4)", transition: "all 0.3s" }}>
-          {saved ? <Check size={16} /> : <Save size={16} />}
-          {saved ? "Saved!" : "Save Settings"}
-        </button>
-      </div>
     </div>
   )
 }
